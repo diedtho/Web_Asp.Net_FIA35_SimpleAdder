@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form action="/home/index">
+        <h1>Ganz toller Web-Rechner 🎸</h1>
+        <input type="number" value="@ViewBag.Ergebnis" name="inpWert1" />
+        <br />
+        <input type="number" value="" name="inpWert2" />
+        <br />
+        <input type="hidden" value="@ViewBag.LogString" name="inpLog" />
+        <br />
+        <button type="submit" name="btnSubmit" value="Add">Add</button>
+    </form>
+    <textarea rows="11">@ViewBag.LogString</textarea>
+</body>
+</html>
