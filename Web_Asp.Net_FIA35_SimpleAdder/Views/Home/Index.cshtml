@@ -11,7 +11,7 @@
     <title>Index</title>
 </head>
 <body>
-    <form action="/home/index">
+    <form action="/home/index" method="post" style="background-color:paleturquoise;border-color:crimson;border-width:thick">
         <h1>Ganz toller Web-Rechner 🎸</h1>
         <input type="number" value="@ViewBag.Ergebnis" name="inpWert1" />
         <br />
@@ -19,8 +19,12 @@
         <br />
         <input type="hidden" value="@ViewBag.LogString" name="inpLog" />
         <br />
-        <button type="submit" name="btnSubmit" value="Add">Add</button>
+        <button type="submit" name="btnSubmit" value="Add">Add</button><br/>
+        <button type="submit" name="btnSubmit" value="ShowLog">Show Log</button>
     </form>
-    <textarea rows="11">@ViewBag.LogString</textarea>
+    @if (@ViewBag.ShowLog == true)
+    {
+        <textarea rows="11" maxlength="111" style="background-color:paleturquoise;border-color:crimson;border-width:thick">@ViewBag.LogString</textarea>
+    }
 </body>
 </html>
