@@ -26,5 +26,8 @@
     {
         <textarea rows="11" maxlength="111" style="background-color:paleturquoise;border-color:crimson;border-width:thick">@ViewBag.LogString</textarea>
     }
+     @*Alternative "Html.Raw"
+     <p>@Html.Raw(ViewBag.Anzeige.Replace("\n","<br />"))</p>*@        
+        
 </body>
 </html>

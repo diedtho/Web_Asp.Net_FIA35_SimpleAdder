@@ -21,12 +21,14 @@ namespace Web_Asp.Net_FIA35_SimpleAdder.Controllers
             if (btnSubmit == "Add")
             {
                 ViewBag.Ergebnis = inpWert1 + inpWert2;
+                // Wird im Hidden-Element abgelegt und bei Submit wieder mit zurück gesendet.
                 ViewBag.LogString = inpLog + inpWert1 + " + " + inpWert2 + "\n";
                 ViewBag.ShowLog = false;
             }
             if (btnSubmit == "ShowLog")
             {
                 ViewBag.Ergebnis = inpWert1;
+                // Hiermit wird in der View erkannt, dass das Log angezeigt werden soll.
                 ViewBag.LogString = inpLog;
                 ViewBag.ShowLog = true;
             }
